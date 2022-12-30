@@ -29,16 +29,22 @@ body{
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-#home-section .bi{
+#home-section .bi, #create-content .bi{
     color: #008ed6;
     background-color: white;
     border-radius: 5px;
 }
 
-#home-section .bi-check{
+#home-section .bi-check, #explore-content .bi-check, #create-content .bi-check, #share-content .bi-check{
     font-size: 3rem;
 }
 
 #home-section .register-form{
     opacity: 0.8;
+}
+
+#explore-content .bi, #share-content .bi{
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
 }
