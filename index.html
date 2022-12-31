@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
         <link rel="stylesheet" href="css/styles.css" />
     </head>
-    <body>
-        <nav class="navbar navbar-expand-sm bg-dark fixed-top" data-bs-theme="dark">
+    <body data-bs-spy="scroll" data-bs-target="#main-nav">
+        <nav class="navbar navbar-expand-sm bg-dark fixed-top" data-bs-theme="dark" id="main-nav">
             <div class="container">
                 <a href="#" class="navbar-brand">LoopLAB</a>
                 <button
@@ -271,14 +271,62 @@
             </section>
         </article>
 
-        <!-- <span id="year"></span> -->
+        <footer id="main-footer" class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center py-5">
+                        <h3>LoopLAB</h3>
+                        <p>Copyright &copy; <span id="year"></span></p>
+                        <button
+                            class="btn btn-primary"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#contactModal"
+                        >
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div id="contactModal" class="modal fade text-dark" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <lable for="name" class="form-label">Name</lable>
+                                <input id="name" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <lable for="email" class="form-label">Email</lable>
+                                <input id="email" type="email" class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <lable for="message" class="form-label">Message</lable>
+                                <textarea id="message" class="form-control" rows="4"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="submit" class="btn btn-primary w-75">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"
         ></script>
         <script>
-            // document.getElementById("year").innerText = new Date().getFullYear();
+            document.getElementById("year").innerText = new Date().getFullYear();
         </script>
     </body>
 </html>
